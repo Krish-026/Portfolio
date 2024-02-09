@@ -1,0 +1,211 @@
+@import "../../app.scss";
+
+.services {
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .textContainer {
+        flex: 1;
+        align-self: flex-end;
+
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include mobile {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-self: center;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        p {
+            font-weight: 200;
+            font-size: 20px;
+            color: gray;
+            text-align: right;
+        }
+
+        hr {
+            width: 500px;
+            border: none;
+            border-top: 0.5px solid gray;
+
+            @include mobile {
+                width: 300px;
+                // margin-bottom: 20px;
+            }
+        }
+    }
+
+    .titleContainer {
+        flex: 2;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            @include mobile {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            img {
+                width: 300px;
+                height: 100px;
+                border-radius: 50px;
+                object-fit: cover;
+
+                @include mobile {
+                    width: 200px;
+                    height: 50px;
+                }
+            }
+
+            h1 {
+                font-size: 70px;
+                font-weight: 100;
+
+                @include mobile {
+                    font-size: 35px;
+                }
+            }
+
+            button {
+                width: 250px;
+                height: 80px;
+                border-radius: 50px;
+                background-color: orange;
+                border: none;
+                font-size: 24px;
+                // cursor: pointer;
+
+                @include mobile {
+                    width: 150px;
+                    height: 50px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .listContainer {
+
+
+        flex: 2;
+        display: flex;
+        max-width: 1366px;
+        margin: auto;
+        display: flex;
+        position: relative;
+        overflow: scroll;
+
+
+
+
+        gap: 20px;
+
+
+
+        @include mobile {
+            width: 100%;
+            position: relative;
+            overflow: scroll;
+
+            margin-top: 1rem;
+
+            // gap: 20px;
+        }
+
+        // .outerBox {
+
+        //     @include mobile {}
+
+        .box {
+            padding: 20px;
+            border: 0.5px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 300px;
+            // min-height: 300px;
+
+
+
+            @include mobile {
+                width: unset;
+                min-height: unset;
+                margin: 5px;
+            }
+
+
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 7;
+                -webkit-box-orient: vertical;
+
+                @include mobile {
+                    // display: none;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 7;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            button {
+                margin-top: 15px;
+                padding: 10px;
+                background-color: orange;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+
+                @include mobile {
+                    background-color: transparent;
+                    border: 1px solid orange;
+                    border-radius: 5px;
+                    color: orange;
+                    width: 50%;
+
+                    &:hover {
+                        background-color: orange;
+                        color: black;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

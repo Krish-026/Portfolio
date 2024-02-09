@@ -1,0 +1,197 @@
+@import "../../app.scss";
+
+.portfolio {
+    position: relative;
+
+
+    .progress {
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-top: 50px;
+        text-align: center;
+        color: orange;
+        font-size: 36px;
+        z-index: -1;
+
+        @include mobile {
+            padding-top: calc(100vh - 100px);
+            font-size: 20px;
+            width: 100%;
+        }
+
+        .progressBar {
+            height: 10px;
+            background-color: white;
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+
+
+        .wrapper {
+            // width: 90%;
+            max-width: 1300px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+
+            @include mobile {
+                flex-direction: column;
+                // gap: 0px;
+            }
+
+            .imageContainer {
+                flex: 1;
+                height: 50%;
+
+                @include mobile {
+                    width: 100%;
+                    max-height: 300px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                    @include mobile {
+                        object-fit: contain;
+                    }
+                }
+
+                .buttons {
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+
+                    @include mobile {
+                        display: flex;
+                        // display: none;
+                        // z-index: 10000;
+                        margin: 0px 10px;
+                    }
+
+                    button {
+                        // margin-top: 15px;
+                        padding: 10px;
+                        background-color: orange;
+                        border: 1px solid orange;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        width: 100%;
+
+                        &:hover {
+                            border: 1px solid orange;
+                            background-color: transparent;
+                            border-radius: 5px;
+                            color: orange;
+                        }
+
+
+                        @include mobile {
+                            background-color: transparent;
+                            border: 1px solid orange;
+                            border-radius: 5px;
+                            color: orange;
+                            width: 50%;
+
+                            &:hover {
+                                background-color: orange;
+                                color: black;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .textContainer {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                @include mobile {
+                    // margin-bottom: 200px;
+                    // z-index: 100000;
+                    gap: 0;
+                    transform: none !important;
+                    padding: 10px;
+                    align-items: center;
+                    text-align: center;
+                    // flex-direction: column-reverse;
+                }
+
+
+                h2 {
+                    font-size: 72px;
+
+                    @include mobile {
+                        font-size: 36px;
+                    }
+                }
+
+                p {
+                    color: gray;
+                    font-size: 20px;
+
+                    @include mobile {
+                        font-size: 16px;
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+
+                    button {
+                        margin-top: 15px;
+                        padding: 10px;
+                        background-color: orange;
+                        border: 1px solid orange;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        width: 100%;
+
+                        &:hover {
+                            border: 1px solid orange;
+                            background-color: transparent;
+                            border-radius: 5px;
+                            color: orange;
+                        }
+
+
+                        @include mobile {
+                            display: none;
+                            background-color: transparent;
+                            border: 1px solid orange;
+                            border-radius: 5px;
+                            color: orange;
+                            width: 50%;
+
+                            &:hover {
+                                background-color: orange;
+                                color: black;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
